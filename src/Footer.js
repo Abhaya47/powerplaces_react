@@ -11,14 +11,14 @@ function Footer(){
                     </h2>
                     <h5>Sign up to get info on all deals and events</h5>
                 </div>
-                <div className="FooterForm lg:p-4 p-2 pb-2 rounded ">
+                <div className="FooterForm lg:p-4 p-2 pb-2 rounded lg:w-10/12 md:w-11/12">
                     <form className="flex flex-col border-2 rounded-md ml-4 mr-4 bg-slate-50 md:flex-row md:relative md:container md:box-border">
-                        <div className="md:box-content border-r-2 border-dotted pl-4 pr-9 pt-1" >
-                            <input type="text" placeholder=" Name" className="block py-2.5 px-0 sm:w-full w-full text-md text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"></input>
+                        <div className="md:box-content border-r-2 md:w-6/12 border-dotted pl-4 pr-2 pt-1 sm:w-full" >
+                            <input type="text" placeholder=" Name" className="block py-2.5 px-0 w-full text-md text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"></input>
                         </div>
                     
-                        <div className="md:box-content *:mb-1  w-full pr-9 pt-1 pl-5 md:pr-4">
-                            <input type="text" placeholder="Email" className="block py-2.5 px-0 md:w-9/12 md:mr-12 w-full text-md text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"></input>
+                        <div className="md:box-content *:mb-1 w-full pr-9 pt-1 pl-5 md:pr-6 sm:w-full">
+                            <input type="text" placeholder="Email" className="block py-2.5 px-0 md:w-9/12 md:mr-12 lg:w-10/12 w-full text-md text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"></input>
                         </div>
                         
                         <button className=" md:absolute md:bottom-0 md:top-0 md:right-0 md:w-auto md:h-full md:auto text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-md text-sm px-5 py-2.5 text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">Subscribe</button>
