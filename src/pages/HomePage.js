@@ -1,9 +1,14 @@
-import { Link } from "react-router-dom";
+import Carousel from "../components/Layout/Carousels";
+import aboutme from "../assets/aboutme.jpg"
+import CardThings from "../components/Layout/CardThings";
 
 const HomePage=()=>{
     return(
-        <button ><Link to="/contact">Contact US</Link></button>
-
+        <div className=" ">
+            <Carousel />
+            <CardThings />
+        </div>
+         
     );
 }
 

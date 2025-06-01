@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import facebook from "../src/assets/icons8-facebook.svg"
-import instagram from "../src/assets/icons8-instagram.svg"
+import facebook from "../src/assets/icons8-facebook.svg";
+import instagram from './assets/icons8-instagram.svg';
 
 function Footer(){
     return(
@@ -29,7 +29,7 @@ function Footer(){
         </div>
             <div className="FooterInfo">
                 <div className="FooterInfo bg-[#F9FAF5] py-6 ">
-                    <div className="flex mx-auto justify-center mx-5 p-5 bg-[#b9b895] rounded-lg shadow-x1 space-y-3">
+                    <div className="flex mx-auto justify-center mx-5 p-5 bg-[#dad8b5] rounded-lg shadow-x1 space-y-3">
                         <div className="flex-1">
                             <h3 className="text-xl font-semibold text-left text-[#FDF6F0] font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;">OFFICE</h3>
                             <div className="flex items-start space-x-2">
