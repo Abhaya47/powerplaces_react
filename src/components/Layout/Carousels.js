@@ -14,28 +14,29 @@ let temp=items;
 // {title,description,imageSrc}
 
 const Carousel = (props) => {
-  const autoSlide = true, autoSlideInterval = 5000;
+  const [autoSlide,setAutoSlide]= useState(true); 
+  const autoSlideInterval = 5000;
   const [currentIndex, setCurrentIndex] = useState(0);
   // props.stuffs.map((image, index) =>(
     console.log("hellooo");
   // ));
   // console.log(props.stuffs.length)
 
-  if (autoSlide) {
-      const poop=()=>
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % props.stuffs.length);
-      
-      const slideInterval = setInterval(poop,autoSlideInterval);
-    }
-
-  // useEffect(() => {
-  //   if (autoSlide) {
-  //     const slideInterval = setInterval(() => {
+  // if (autoSlide) {
+  //     const poop=()=>
   //       setCurrentIndex((prevIndex) => (prevIndex + 1) % props.stuffs.length);
-  //     }, autoSlideInterval);
-  //     return () => clearInterval(slideInterval);
+      
+  //     const slideInterval = setInterval(poop,autoSlideInterval);
   //   }
-  // }, [autoSlide, autoSlideInterval, props.stuffs.length]);
+
+  useEffect(() => {
+    if (autoSlide) {
+      const slideInterval = setInterval(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % props.stuffs.length);
+      }, autoSlideInterval);
+      return () => clearInterval(slideInterval);
+    }
+  }, [autoSlide, autoSlideInterval, props.stuffs.length]);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % props.stuffs.length);
@@ -47,7 +48,7 @@ const Carousel = (props) => {
 
   return (
     <div className=" w-full mx-auto">
-      <div className="overflow-hidden relative h-screen">
+      <div onMouseOver={()=>{setAutoSlide(false)}} onMouseLeave={()=>setAutoSlide(true)} className={`overflow-hidden relative h-screen `}>
         {props.stuffs.map((image, index) => (
           
           <div
@@ -66,11 +67,11 @@ const Carousel = (props) => {
                   imageSrc={props.stuffs[0].getImageSrc()} 
                 /> 
                 <Card 
-                  key={props.stuffs[1].title} 
-                  title={props.stuffs[1].title} 
-                  description={props.stuffs[1].description}
+                  key={props.stuffs[index].title} 
+                  title={props.stuffs[index].title} 
+                  description={props.stuffs[index].description}
                   url="syke.com" 
-                  imageSrc={props.stuffs[1].getImageSrc()} 
+                  imageSrc={props.stuffs[index].getImageSrc()} 
                 /> 
                 <Card 
                   key={props.stuffs[2].title} 
@@ -88,7 +89,7 @@ const Carousel = (props) => {
           
         ))}
       </div>
-      <button
+      {/* <button
         className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-2 "
         onClick={prevSlide}
       >
@@ -99,7 +100,7 @@ const Carousel = (props) => {
         onClick={nextSlide}
       >
         O
-      </button>
+      </button> */}
       <div className="relative bottom-0 left-0 right-0 flex justify-center mb-4">
         {props.stuffs.map((_, index) => (
           <div

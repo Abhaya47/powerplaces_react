@@ -11,7 +11,7 @@ const HomePage=()=>{
 
             </div>
             <div className="mt-96">
-                {/* <CardThings /> */}
+                <CardThings />
 
             </div>
         </div>
