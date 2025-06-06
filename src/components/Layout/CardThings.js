@@ -1,4 +1,5 @@
 import Card from "./Card"
+import Carousel from "./Carousels"
 
 const stuffs=[ 
  { 
@@ -28,18 +29,13 @@ const stuffs=[
 ]
 
 
+
+
 export default function CardThings(){    
     return(
-        <div className="flex  m-5 mt-8 h-screen m-auto">
-            {stuffs.map((stuff) => ( 
-         <Card 
-           key={stuff.title} 
-           title={stuff.title} 
-           description={stuff.description} 
-           url="syke.com" 
-           imageSrc={stuff.getImageSrc()} 
-         /> 
-       ))} 
+        <div className="">
+          <Carousel stuffs={stuffs} display={true}/>
+
         </div>
     )
 }
