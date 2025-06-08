@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "./assets/aboutme.jpg";
+import logo from "../src/assets/aboutme.jpg";
 
 function Header(){
     console.log("Header LOaded");
