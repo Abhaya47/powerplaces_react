@@ -13,10 +13,10 @@ const HomePage=()=>{
             </div>
 
             <div className="mt-10">
-                <h1 className="text-6xl font-bold font-mono text-pretty text-cyan-700">Places</h1>
+                <h1 className="ml-9 text-2xl md:text-4xl font-bold font-mono text-pretty text-cyan-700">Places</h1>
             </div>
 
-            <div className="mb-32">
+            <div className="mb-3">
                 <CardThings />
             </div>
         </div>

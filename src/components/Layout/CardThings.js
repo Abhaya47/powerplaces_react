@@ -11,19 +11,19 @@ const stuffs=[
  { 
    title: "Hiiiii", 
    description: 
-     ",JUEJAGDHZJB  .KJBB ", 
+     "I have to write something ", 
    getImageSrc: () => require("../../assets/b.jpg"), 
  }, 
  { 
    title: "pop", 
    description: 
-     "A saefJKCBdh .wkjeafbdsh kjAEFBSBD", 
+     "Black is a very good colour on me", 
    getImageSrc: () => require("../../assets/c.jpg"), 
  }, 
  { 
    title: "Kamp", 
    description: 
-     "Someday I will find my way back to your", 
+     "Some dayyyy I will find my way back to your", 
    getImageSrc: () => require("../../assets/d.jpg"), 
  },
   { 
@@ -43,7 +43,7 @@ const stuffs=[
 
 export default function CardThings(){    
     return(
-        <div className="grid grid-cols-1 justify-center px-0 gap-y-2 md:mt-2 md:grid-cols-2 md:gap-x-3 md:px-0 md:gap-y-5 md:mx-3 lg:mt-2 lg:grid-cols-3 lg:gap-x-3 lg:px-0 lg:gap-y-20 ">
+        <div className="grid grid-cols-1 justify-center px-0 gap-y-2 md:mt-2 md:grid-cols-2 md:gap-x-3 md:px-0 md:gap-y-2 md:mx-3 lg:mt-2 lg:grid-cols-3 lg:gap-x-3 lg:px-0 lg:gap-y-3 ">
             {stuffs.map((image, index) => (
                 <Card 
                   key={image.title} 

@@ -67,8 +67,8 @@ const getVisibleSlides = () => {
             <div className='container relative'>
               <img src={image.getImageSrc()} alt={`Slide ${index}`} className="lg:w-full w-full h-screen sm:aspect-9/16 lg:aspect-video sm:object-cover" />    
               <div className="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center space-y-4 text-center">
-                <div className="italic text-xl md:text-5xl  text-opacity-100 font-extrabold text-blue-400">FALA LALA LA</div>
-                <div className="italic text-5xl md:text-9xl text-opacity-100 font-extrabold text-gray-50">{image.description}</div>
+                <div className="italic text-xl md:text-3xl  text-opacity-100 font-extrabold text-blue-400">FALA LALA LA</div>
+                <div className="italic text-5xl md:text-6xl text-opacity-100 font-extrabold text-gray-50">{image.description}</div>
               </div>
             </div>
           </div>    
@@ -90,7 +90,7 @@ const getVisibleSlides = () => {
         {props.stuffs.map((_, index) => (
           <div
             key={index}
-            className={`w-2 h-2 md:w-5 md:h-5 rounded-full mx-1 ${index === currentIndex ? 'bg-gray-800' : 'bg-gray-400'}`}
+            className={`w-2 h-2 md:w-2.5 md:h-2.5 lg:w-3 lg:h-3 rounded-full mx-1 ${index === currentIndex ? 'bg-gray-800' : 'bg-gray-400'}`}
             onClick={() => setCurrentIndex(index)}
           />
         ))}
