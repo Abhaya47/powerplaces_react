@@ -5,37 +5,54 @@ const stuffs=[
  { 
    title: "Hello", 
    description: 
-     "waaaaaa", 
-   getImageSrc: () => require("../../assets/ChatGPT Image May 30, 2025, 09_36_08 AM.png"), 
+     "Ssomething something something hyyyyaaaa I'm bored ", 
+   getImageSrc: () => require("../../assets/a.jpg"), 
  }, 
  { 
    title: "Hiiiii", 
    description: 
      ",JUEJAGDHZJB  .KJBB ", 
-   getImageSrc: () => require("../../assets/aboutme.jpg"), 
+   getImageSrc: () => require("../../assets/b.jpg"), 
  }, 
  { 
    title: "pop", 
    description: 
      "A saefJKCBdh .wkjeafbdsh kjAEFBSBD", 
-   getImageSrc: () => require("../../assets/icons8-facebook.svg"), 
+   getImageSrc: () => require("../../assets/c.jpg"), 
  }, 
  { 
-   title: "faskh", 
+   title: "Kamp", 
    description: 
-     "i DONT LIKE WRITING", 
-   getImageSrc: () => require("../../assets/logo192.png"), 
+     "Someday I will find my way back to your", 
+   getImageSrc: () => require("../../assets/d.jpg"), 
+ },
+  { 
+   title: "Yorkshire", 
+   description: 
+     "I got this felling on the summer day", 
+   getImageSrc: () => require("../../assets/e.jpg"), 
+ },
+  { 
+   title: "Omphf", 
+   description: 
+     "hello darkness my old friend", 
+   getImageSrc: () => require("../../assets/f.jpg"), 
  },
 ]
 
 
-
-
 export default function CardThings(){    
     return(
-        <div className="">
-          <Carousel stuffs={stuffs} display={true}/>
-
+        <div className="grid grid-cols-1 justify-center px-0 gap-y-2 md:mt-2 md:grid-cols-2 md:gap-x-3 md:px-0 md:gap-y-5 md:mx-3 lg:mt-2 lg:grid-cols-3 lg:gap-x-3 lg:px-0 lg:gap-y-20 ">
+            {stuffs.map((image, index) => (
+                <Card 
+                  key={image.title} 
+                  title={image.title} 
+                  description={image.description}
+                  url="syke.com" 
+                  imageSrc={image.getImageSrc()}   
+                />  
+            ))}
         </div>
     )
 }
