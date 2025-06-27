@@ -44,10 +44,10 @@ const getVisibleSlides = () => {
   };
 
   return (
-    <div className=" w-full mx-auto">
-      <div onMouseOver={()=>{setAutoSlide(false)}} onMouseLeave={()=>setAutoSlide(true)} className={`overflow-hidden relative ${props.display===false? 'h-screen' : 'h-screen'}`}>
+    <div className=" w-full mx-auto ">
+      <div onMouseOver={()=>{setAutoSlide(false)}} onMouseLeave={()=>setAutoSlide(true)} className={`overflow-hidden relative h-screen`}>
         {props.stuffs.map((image, index) => (
-          <div key={index} className={`absolute inset-0 transition-transform duration-700 ease-in-out transform ${index === currentIndex ? 'translate-x-0' : 'translate-x-full'}`}>
+          <div key={index} className={`absolute h-screen inset-0 transition-transform duration-700 ease-in-out transform ${index === currentIndex ? 'translate-x-0' : 'translate-x-full'}`}>
 
           
              {/* props.display?<div className="flex w-full">
@@ -64,8 +64,12 @@ const getVisibleSlides = () => {
               </div>
             ))}
           </div>: */}
-            <div className='container relative'>
-              <img src={image.getImageSrc()} alt={`Slide ${index}`} className="min-w-full max-w-full h-screen opacity-80 sm:aspect-9/16 md:aspect-video  md:object-cover" />    
+            <div className='container relative h-screen'>
+                  <div
+      className="h-screen w-full bg-fixed bg-center bg-cover bg-no-repeat opacity-70"
+      style={{ backgroundImage: `url(${image.getImageSrc()})` }}
+    ></div>
+              {/* <img src={image.getImageSrc()} alt={`Slide ${index}`} className="min-w-full max-w-full h-screen opacity-80 sm:aspect-9/16 md:aspect-video  md:object-cover" />     */}
               <div className="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center space-y-4 text-center">
                 <div className="italic text-xl md:text-3xl  text-opacity-100 font-extrabold text-blue-400">FALA LALA LA</div>
                 <div className="italic text-5xl md:text-6xl text-opacity-100 font-extrabold text-gray-50">{image.description}</div>
@@ -74,7 +78,7 @@ const getVisibleSlides = () => {
           </div>    
         ))}
       </div>
-      {/* <button
+      <button
         className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-2 "
         onClick={prevSlide}
       >
@@ -85,7 +89,7 @@ const getVisibleSlides = () => {
         onClick={nextSlide}
       >
         O
-      </button> */}
+      </button>
       <div className="relative bottom-10 left-0 right-0 flex justify-center mb-4">
         {props.stuffs.map((_, index) => (
           <div

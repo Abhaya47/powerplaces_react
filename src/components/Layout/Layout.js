@@ -16,8 +16,8 @@ function Layout({children}){
                 </main>
             </div>
 
-            <div>
-                <footer>
+            <div className="">
+                <footer className="">
                     <Footer/>
                 </footer>
             </div>
