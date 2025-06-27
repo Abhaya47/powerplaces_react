@@ -3,16 +3,24 @@ import Footer from "../../Footer";
 
 function Layout({children}){
     return(
-        <div className="container">
-            <header>
-            <Header/>
-            </header>
-            <main>
-            {children}
-            </main>
-            <footer>
-            <Footer/>
-            </footer>
+        <div className="container ">
+            <div>
+                <header>
+                    <Header/>
+                </header>
+            </div>
+
+            <div>
+                <main>
+                    {children}
+                </main>
+            </div>
+
+            <div className="">
+                <footer className="">
+                    <Footer/>
+                </footer>
+            </div>
         </div>
     );
 }

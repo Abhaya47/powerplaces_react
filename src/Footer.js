@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
-import facebook from "../src/assets/icons8-facebook.svg";
-import instagram from './assets/icons8-instagram.svg';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSquareFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons/faInstagram";
+import { faStarHalf } from "@fortawesome/free-solid-svg-icons";
 
 function Footer(){
     return(
@@ -48,8 +50,10 @@ function Footer(){
                         <div className="flex-row-reverse ">
                             <h3 className="text-xl font-semibold text-left text-[#FDF6F0] font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;">OUR SOCIALS</h3>
                             <div className="flex justify-center">
-                                <a href="facebook.com"><img src={facebook} alt="Facebook" className="pr-2"/></a>
-                                <a href="facebook.com"><img src={instagram} alt="Facebook" className=""/></a>
+                                <a href="facebook.com"><FontAwesomeIcon icon={faSquareFacebook} className="pr-2 text-xl"/></a>
+                                <a href="facebook.com"><FontAwesomeIcon icon={faInstagram} className="text-xl"/></a>
+                                <a href="facebook.com"><FontAwesomeIcon icon={faStarHalf} className="text-xl"/></a>
+
                             </div>
                         </div>
                     </div>

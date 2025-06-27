@@ -1,0 +1,24 @@
+parallax{
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 1px;
+}
+
+.parallax-layer{
+  position: ;
+  top: 0%;
+  right: 0;
+  left:0;
+  bottom: 0;
+}
+
+
+
+.layer1 {
+  transform: translateZ(0);
+}
+
+.layer2 {
+  transform: translateZ(-1px);
+}
