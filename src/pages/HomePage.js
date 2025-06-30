@@ -1,12 +1,14 @@
 import CardThings from "../components/Layout/CardThings";
 import CarouselImages from "../components/Layout/CarouselImages";
-import Testimonials from "./Testimonials";
 import f from "../assets/moumntain.jpeg";
 import g from "../assets/mountain1.jpg";
 
 import "../css/homepage.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+
+import Testimonials from "../components/Layout/Testimonials";
+
 
 const HomePage=()=>{
 
@@ -61,11 +63,10 @@ const HomePage=()=>{
                 </div>
             </div>
 
-            <div>
+            <div className="">
                 <Testimonials/>
             </div>
         </div>
-         
     );
 }
 
