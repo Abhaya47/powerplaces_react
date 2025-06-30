@@ -50,7 +50,6 @@ const Testimonials = ({box1, box2}) => {
             <div style={boxStyle}>
                 <div style={circleStyle}></div>
                 <div><StarRating rating={3} /></div>
-                
                 <p>ooooooOOOooooo</p>
                 {box2}
             </div>

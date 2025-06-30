@@ -3,11 +3,11 @@ import Carousel from "./Carousels";
 export default function CarouselImages(){
     const images=[ 
  { 
-   getImageSrc: () => require("../../assets/j.jpg"), 
+   getImageSrc: () => require("../../assets/g.jpg"), 
    description:"BOUDHA"
  }, 
  { 
-   getImageSrc: () => require("../../assets/k.jpg"), 
+   getImageSrc: () => require("../../assets/f.jpg"), 
    description:"MY O MY"
  }, 
  { 

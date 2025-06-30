@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import aboutme from "../../assets/aboutme.jpg"
-import logo from "../../assets/logo192.png"
-import something from "../../assets/ChatGPT Image May 30, 2025, 09_36_08 AM.png"
-import CardThings from './CardThings';
-import Card from './Card';
+
 
 const items=3;
 
@@ -65,15 +61,13 @@ const getVisibleSlides = () => {
             ))}
           </div>: */}
             <div className='container relative h-screen'>
-                  <div
-      className="h-screen w-full bg-fixed bg-center bg-cover bg-no-repeat opacity-70"
-      style={{ backgroundImage: `url(${image.getImageSrc()})` }}
-    ></div>
+              <div className="h-screen w-full bg-fixed bg-center bg-cover bg-no-repeat opacity-90 " style={{ backgroundImage: `url(${image.getImageSrc()})` }}>
+                <div className="absolute  top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center space-y-4 text-center">
+                  <div className="font-sans text-5xl md:text-6xl text-opacity-100 font-extrabold text-gray-50">{image.description}</div>
+                  <div className="italic text-xl md:text-3xl  text-opacity-100 font-extrabold text-white">FALA LALA LA</div>
+                </div>
+            </div>
               {/* <img src={image.getImageSrc()} alt={`Slide ${index}`} className="min-w-full max-w-full h-screen opacity-80 sm:aspect-9/16 md:aspect-video  md:object-cover" />     */}
-              <div className="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center space-y-4 text-center">
-                <div className="italic text-xl md:text-3xl  text-opacity-100 font-extrabold text-blue-400">FALA LALA LA</div>
-                <div className="italic text-5xl md:text-6xl text-opacity-100 font-extrabold text-gray-50">{image.description}</div>
-              </div>
             </div>
           </div>    
         ))}
