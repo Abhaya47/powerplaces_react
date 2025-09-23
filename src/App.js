@@ -6,6 +6,7 @@ import ContactPage from './pages/ContactPage';
 import AboutUs from './pages/AboutUs';
 import Gallery from './pages/Gallery';
 import Testimonials from './pages/Testimonials';
+import Blog from './pages/Blog';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
           <Route path="/gallery" element={<Gallery/>}/>
           <Route path="/aboutus" element={<AboutUs/>}/>
           <Route path="/testimonials" element={<Testimonials/>}/>
-
+          <Route path="/blog" element={<Blog/>}/>
         </Routes>
     </Layout>
 

@@ -4,10 +4,19 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   safelist: [
-    "bg-[url('/src/assets/hamburgbg.png')]",
   ],
   theme: {
     extend: {
+      colors:{
+        'pastel-pink': '#FCE6EE',
+        'pastel-blue': '#FEF7F7',
+        pastelgreen: '#a8e6cf',
+        pastelpurple: '#d4c5f9',
+        pastelyellow: '#fff2cc',
+        pastelpeach: '#ffcccb',
+        matchagreen: '#87a96b',
+
+      },
       screens: {
         sm: '480px',
         md: '768px',
