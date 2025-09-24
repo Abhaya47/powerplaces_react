@@ -43,7 +43,7 @@ const stuffs=[
 
 export default function CardThings({visibleStuff}){   
     return(
-        <div className="grid grid-cols-1 justify-center items-stretch mx-5 px-0 gap-y-2 md:mt-2 md:grid-cols-2 md:gap-x-10 md:px-5 md:gap-y-5 md:mx-5 lg:mt-2 lg:grid-cols-3 lg:gap-x-3 lg:px-0 lg:gap-y-3 xl:grid-cols-4 bg-gray-950">
+        <div className="grid grid-cols-1 justify-center items-stretch px-0 gap-y-2 md:grid-cols-2 md:gap-x-10 md:px-5 md:gap-y-5  lg:grid-cols-3 lg:gap-x-3 lg:px-0 lg:gap-y-3 xl:grid-cols-4 bg-gray-950">
             {visibleStuff.map((image, index) => (
                 <Card 
                   key={image.title} 

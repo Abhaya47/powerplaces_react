@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import useFetch from "../hooks/usefetch"
 
-import CardThings from "../components/Layout/places";
+import CardThings from "../components/Layout/CardGrid";
 import CarouselImages from "../components/Layout/CarouselImages";
 import f from "../assets/moumntain.jpeg";
 import g from "../assets/mountain1.jpg";
@@ -81,7 +81,7 @@ const HomePage=()=>{
             <div className=" mx-0 pb-10 pt-20 px-0 bg-slate-950">
                 <h1 className="pb-4 text-3xl md:text-5xl lg:text-6xl font-extrabold font-sans  text-orange-300 leading-tight tracking-tight drop-shadow-sm transition duration-300 hover:text-cyan-100 text-center">Power Places</h1>
                 <p className=" text-center text-lg md:text-2xl lg:text-3xl italic text-emerald-200 hover:text-cyan-100 pb-5 md:pb-7">Discover places that change your perspective.</p>
-                {visibleStuffs!=null?<CardThings visibleStuff={visibleStuffs}/>:<div className="text-6xl text-white">LOADING</div>}
+                {visibleStuffs!=null?<CardThings visibleStuff={visibleStuffs}/>:<div className="py-6 text-6xl text-white tracking-widest text-center">LOADING...</div>}
                 
                 
                 <div className="flex items-center justify-center pt-5">
